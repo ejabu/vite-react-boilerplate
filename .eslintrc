@@ -21,12 +21,12 @@
   "plugins": ["react", "@typescript-eslint"],
   "rules": {
     "react/react-in-jsx-scope": 0,
-    "react/no-deprecated": 0,
     "react/destructuring-assignment": [1],
     "react/function-component-definition": [
       "error",
       { "namedComponents": "arrow-function" },
     ],
+    "react-hooks/exhaustive-deps": "warn",
   },
   "settings": {
     "react": {
