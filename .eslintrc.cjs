@@ -37,8 +37,9 @@ module.exports = {
     'import/no-extraneous-dependencies': 'off',
     'import/prefer-default-export': 'off',
     '@typescript-eslint/no-shadow': 'off',
-    '@typescript-eslint/no-unused-vars': 'off',
     '@typescript-eslint/require-await': 'off',
+    '@typescript-eslint/no-unused-vars': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
     '@typescript-eslint/no-floating-promises': ['error'],
     '@typescript-eslint/naming-convention': [
       'error',
@@ -121,8 +122,9 @@ module.exports = {
       'error',
       {
         number: {
+          onlyIfContainsSeparator: false,
           groupLength: 3,
-          minimumDigits: 0,
+          minimumDigits: 6,
         },
       },
     ],
