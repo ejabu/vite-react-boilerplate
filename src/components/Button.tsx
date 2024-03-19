@@ -2,10 +2,14 @@ type Props = {
   suffix: string;
 };
 const Button = (props: Props) => {
-  // const {suffix} = props;
+  const { suffix } = props;
+  const nice = 4;
+
   return (
     <div>
-      <div>Hello world {props.suffix}</div>
+      <div>
+        Hello {nice} world {suffix}
+      </div>
     </div>
   );
 };

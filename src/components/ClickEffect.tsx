@@ -14,8 +14,11 @@ const ClickHook = () => {
   return (
     <div>
       <p>You clicked {count} times</p>
-      <button onClick={handleClick}>Click me</button>
+      <button type="button" onClick={handleClick}>
+        Click me
+      </button>
     </div>
   );
 };
+
 export default ClickHook;
