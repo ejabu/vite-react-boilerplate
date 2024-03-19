@@ -36,7 +36,38 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'warn',
     'import/no-extraneous-dependencies': 'off',
     'import/prefer-default-export': 'off',
+    '@typescript-eslint/no-shadow': 'off',
     '@typescript-eslint/no-unused-vars': 'off',
+    '@typescript-eslint/require-await': 'off',
+    '@typescript-eslint/no-floating-promises': ['error'],
+    '@typescript-eslint/naming-convention': [
+      'error',
+      {
+        format: ['PascalCase'],
+        selector: ['interface', 'typeAlias'],
+      },
+      {
+        selector: ['variable', 'function'],
+        format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
+        leadingUnderscore: 'allow',
+      },
+      {
+        selector: ['variable'],
+        format: ['PascalCase'],
+        types: ['boolean'],
+        prefix: ['is', 'has', 'are', 'can', 'should', 'did', 'will'],
+      },
+      {
+        selector: ['variable'],
+        format: ['camelCase'],
+        types: ['array'],
+        suffix: ['s'],
+      },
+      {
+        selector: ['enum', 'enumMember'],
+        format: ['PascalCase'],
+      },
+    ],
     'sonarjs/prefer-immediate-return': 'off',
     'sonarjs/no-gratuitous-expressions': 'warn',
     'no-constant-condition': 'warn',
@@ -73,11 +104,9 @@ module.exports = {
       'LabeledStatement',
       'WithStatement',
     ],
-    '@typescript-eslint/require-await': 'off',
     'no-await-in-loop': 'off',
     'promise/prefer-await-to-then': 'warn',
     'unicorn/prevent-abbreviations': 'off',
-    '@typescript-eslint/no-floating-promises': ['error'],
     quotes: [
       'error',
       'single',
@@ -102,34 +131,6 @@ module.exports = {
       {
         case: 'kebabCase',
         ignore: ['^FOOBAR\\.js$', '^(B|b)az', '.tsx$', /^vendor/i],
-      },
-    ],
-    '@typescript-eslint/naming-convention': [
-      'error',
-      {
-        format: ['PascalCase'],
-        selector: ['interface', 'typeAlias'],
-      },
-      {
-        selector: ['variable', 'function'],
-        format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
-        leadingUnderscore: 'allow',
-      },
-      {
-        selector: ['variable'],
-        format: ['PascalCase'],
-        types: ['boolean'],
-        prefix: ['is', 'has', 'are', 'can', 'should', 'did', 'will'],
-      },
-      {
-        selector: ['variable'],
-        format: ['camelCase'],
-        types: ['array'],
-        suffix: ['s'],
-      },
-      {
-        selector: ['enum', 'enumMember'],
-        format: ['PascalCase'],
       },
     ],
   },
