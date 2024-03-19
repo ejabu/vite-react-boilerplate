@@ -42,7 +42,10 @@ module.exports = {
     'no-constant-condition': 'warn',
     'no-console': 'warn',
     'no-return-await': 'error',
-    'newline-after-var': ['error', 'always'],
+    'padding-line-between-statements': [
+      'error',
+      { blankLine: 'always', prev: ['const', 'let', 'var'], next: 'return' },
+    ],
     'newline-before-return': 'error',
     'no-implicit-coercion': [
       'error',
@@ -73,7 +76,8 @@ module.exports = {
     '@typescript-eslint/require-await': 'off',
     'no-await-in-loop': 'off',
     'promise/prefer-await-to-then': 'warn',
-    "@typescript-eslint/no-floating-promises": ["error"],
+    'unicorn/prevent-abbreviations': 'off',
+    '@typescript-eslint/no-floating-promises': ['error'],
     quotes: [
       'error',
       'single',
@@ -93,20 +97,23 @@ module.exports = {
         },
       },
     ],
+    'unicorn/filename-case': [
+      'error',
+      {
+        case: 'kebabCase',
+        ignore: ['^FOOBAR\\.js$', '^(B|b)az', '.tsx$', /^vendor/i],
+      },
+    ],
     '@typescript-eslint/naming-convention': [
       'error',
       {
         format: ['PascalCase'],
-        selector: ['interface'],
+        selector: ['interface', 'typeAlias'],
       },
       {
         selector: ['variable', 'function'],
-        format: ['camelCase'],
-        leadingUnderscore: 'allow',
-      },
-      {
-        selector: 'variable',
         format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
+        leadingUnderscore: 'allow',
       },
       {
         selector: ['variable'],
@@ -123,14 +130,6 @@ module.exports = {
       {
         selector: ['enum', 'enumMember'],
         format: ['PascalCase'],
-      },
-      {
-        custom: {
-          match: true,
-          regex: '^[TI][A-Z]',
-        },
-        format: ['PascalCase'],
-        selector: ['typeAlias'],
       },
     ],
   },
