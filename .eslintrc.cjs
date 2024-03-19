@@ -3,6 +3,7 @@ module.exports = {
     browser: true,
     es2022: true,
   },
+  plugins: ['react', '@typescript-eslint', 'promise'],
   extends: [
     'airbnb',
     'airbnb-typescript',
@@ -11,6 +12,7 @@ module.exports = {
     'plugin:react-hooks/recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:prettier/recommended',
+    'plugin:promise/recommended',
     'prettier',
   ],
   overrides: [],
@@ -22,7 +24,6 @@ module.exports = {
     project: ['./tsconfig.json', './tsconfig.node.json'],
     tsconfigRootDir: '.',
   },
-  plugins: ['react', '@typescript-eslint'],
   rules: {
     'react/react-in-jsx-scope': 0,
     'react/destructuring-assignment': [1],
