@@ -16,4 +16,4 @@ package-lock.json
 yarn.lock
 
 # Ignore eslint
-**/.eslintrc*
+config/.eslintrc*
