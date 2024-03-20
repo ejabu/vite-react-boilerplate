@@ -1,9 +1,7 @@
 import { useCase } from './useCase';
-import { usersStub } from './users.stub';
 
 const UserList = () => {
-  const users = usersStub.data.filter((x) => x.age > 10);
-  const { handleNext, handlePrevious } = useCase();
+  const { users, handleNext, handlePrevious } = useCase();
 
   return (
     <div>
