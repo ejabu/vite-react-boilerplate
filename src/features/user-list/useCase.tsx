@@ -4,7 +4,7 @@ import { useRepo } from './useRepo';
 
 export const useCase = () => {
   const [pageIndex, setPageIndex] = useState(1);
-  const { data, isFetching } = useRepo(pageIndex);
+  const { data: users, ...rest } = useRepo(pageIndex);
   const handleNext = () => {
     setPageIndex((pageIndex) => pageIndex + 1);
   };
@@ -13,8 +13,8 @@ export const useCase = () => {
   };
 
   return {
-    users: data,
-    isFetching,
+    users,
+    ...rest,
     pageIndex,
     handleNext,
     handlePrevious,

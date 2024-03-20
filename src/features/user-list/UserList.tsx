@@ -1,8 +1,13 @@
 import { useCase } from './useCase';
 
 const UserList = () => {
-  const { users, pageIndex, handleNext, handlePrevious, isFetching } =
-    useCase();
+  const {
+    users,
+    pageIndex,
+    handleNext,
+    handlePrevious,
+    isFetching,
+  } = useCase();
 
   return (
     <div>
