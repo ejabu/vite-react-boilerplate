@@ -1,7 +1,8 @@
 import { useCase } from './useCase';
 
 const UserList = () => {
-  const { users, pageIndex, handleNext, handlePrevious } = useCase();
+  const { users, pageIndex, handleNext, handlePrevious, isFetching } =
+    useCase();
 
   return (
     <div>
@@ -12,6 +13,7 @@ const UserList = () => {
           return <div key={user.id}>{user.lastName}</div>;
         })}
       </div>
+      {isFetching && <div>Spinner</div>}
       <div>
         <button type="button" onClick={handleNext}>
           Next
