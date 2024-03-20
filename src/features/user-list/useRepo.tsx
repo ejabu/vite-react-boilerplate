@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useQuery } from '@tanstack/react-query';
 
 import userService from '../../services/user.service';
 
@@ -9,16 +9,12 @@ type User = {
 };
 
 export const useRepo = (pageIndex: number) => {
-  const [users, setUsers] = useState<User[]>([]);
+  const query = useQuery({
+    initialData: [],
+    queryKey: [pageIndex],
+    queryFn: () => userService.getUsers(pageIndex),
+    cacheTime: 5 * 60 * 1000,
+  });
 
-  useEffect(() => {
-    async function fetchData() {
-      const users = await userService.getUsers(pageIndex);
-      setUsers(users);
-    }
-
-    fetchData();
-  }, [pageIndex]);
-
-  return { users };
+  return query;
 };
