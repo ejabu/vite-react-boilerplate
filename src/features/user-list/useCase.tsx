@@ -1,18 +1,21 @@
+import { useState } from 'react';
+
 import { usersStub } from './users.stub';
 
 export const useCase = () => {
+  const [pageIndex, setPageIndex] = useState(1);
   const users = usersStub.data.filter((x) => x.age > 10);
-  console.log('to check');
 
   const handleNext = () => {
-    console.log('Handle Next');
+    setPageIndex((pageIndex) => pageIndex + 1);
   };
   const handlePrevious = () => {
-    console.log('Handle Previous');
+    setPageIndex((pageIndex) => pageIndex - 1);
   };
 
   return {
     users,
+    pageIndex,
     handleNext,
     handlePrevious,
   };

@@ -1,7 +1,7 @@
 import { useCase } from './useCase';
 
 const UserList = () => {
-  const { users, handleNext, handlePrevious } = useCase();
+  const { users, pageIndex, handleNext, handlePrevious } = useCase();
 
   return (
     <div>
@@ -16,6 +16,7 @@ const UserList = () => {
         <button type="button" onClick={handleNext}>
           Next
         </button>
+        <div>{pageIndex}</div>
         <button type="button" onClick={handlePrevious}>
           Previous
         </button>
