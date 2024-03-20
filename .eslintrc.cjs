@@ -17,7 +17,6 @@ module.exports = {
     'plugin:unicorn/recommended',
     'prettier',
   ],
-  overrides: [],
   ignorePatterns: ['dist', 'config', '.eslintrc.cjs'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -136,6 +135,14 @@ module.exports = {
       },
     ],
   },
+  overrides: [
+    {
+      files: ['*.tsx'],
+      rules: {
+        'unicorn/consistent-function-scoping': 'off',
+      },
+    },
+  ],
   settings: {
     react: {
       version: '17.0.2',
