@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-import userService from './user.service';
+import userService from '../../services/user.service';
 
 type User = {
   id: number;
