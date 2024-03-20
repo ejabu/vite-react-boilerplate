@@ -1,11 +1,10 @@
 import { useState } from 'react';
 
-import { usersStub } from './users.stub';
+import { useRepo } from './useRepo';
 
 export const useCase = () => {
   const [pageIndex, setPageIndex] = useState(1);
-  const users = usersStub.data.filter((x) => x.age > 10);
-
+  const { users } = useRepo(pageIndex);
   const handleNext = () => {
     setPageIndex((pageIndex) => pageIndex + 1);
   };
