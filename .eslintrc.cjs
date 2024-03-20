@@ -39,7 +39,7 @@ module.exports = {
     '@typescript-eslint/require-await': 'off',
     '@typescript-eslint/no-unused-vars': 'off',
     '@typescript-eslint/no-explicit-any': 'off',
-    '@typescript-eslint/no-floating-promises': ['error'],
+    '@typescript-eslint/no-floating-promises': ['warn'],
     '@typescript-eslint/naming-convention': [
       'error',
       {
@@ -70,6 +70,7 @@ module.exports = {
     ],
     'sonarjs/prefer-immediate-return': 'off',
     'sonarjs/no-gratuitous-expressions': 'warn',
+    'class-methods-use-this': 'off',
     'no-constant-condition': 'warn',
     'no-console': 'warn',
     'no-return-await': 'error',
@@ -140,6 +141,7 @@ module.exports = {
       files: ['*.tsx'],
       rules: {
         'unicorn/consistent-function-scoping': 'off',
+        '@typescript-eslint/no-floating-promises': 'off',
       },
     },
   ],
