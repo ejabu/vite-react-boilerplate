@@ -15,7 +15,7 @@ module.exports = {
     'plugin:sonarjs/recommended',
     'plugin:unicorn/recommended',
   ],
-  ignorePatterns: ['dist', 'config', '.eslintrc.cjs'],
+  ignorePatterns: ['dist', 'config', '.eslintrc.cjs', 'postcss.config.cjs'],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 'latest',
