@@ -3,7 +3,13 @@ module.exports = {
     browser: true,
     es2022: true,
   },
-  plugins: ['react', '@typescript-eslint', 'promise', 'sonarjs', 'newline-destructuring'],
+  plugins: [
+    'react',
+    '@typescript-eslint',
+    'promise',
+    'sonarjs',
+    'newline-destructuring',
+  ],
   extends: [
     'airbnb',
     'airbnb-typescript',
@@ -27,7 +33,10 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'object-curly-newline': 'warn',
     '@typescript-eslint/no-unused-vars': 'off',
-    'newline-destructuring/newline': ['error', { items: 4, itemsWithRest: 4, maxLength: 80 }],
+    'newline-destructuring/newline': [
+      'error',
+      { items: 4, itemsWithRest: 4, maxLength: 80 },
+    ],
     'react/react-in-jsx-scope': 'off',
     'prefer-destructuring-assignment': 'off',
     'import/order': [
@@ -41,7 +50,10 @@ module.exports = {
     'arrow-body-style': 'off',
     'react/destructuring-assignment': 'warn',
     'react/jsx-one-expression-per-line': 'off',
-    'react/function-component-definition': ['error', { namedComponents: 'arrow-function' }],
+    'react/function-component-definition': [
+      'error',
+      { namedComponents: 'arrow-function' },
+    ],
     'react-hooks/exhaustive-deps': 'warn',
     'import/no-extraneous-dependencies': 'off',
     '@typescript-eslint/no-shadow': 'off',
@@ -116,7 +128,12 @@ module.exports = {
         allowAsStatement: true,
       },
     ],
-    'no-restricted-syntax': ['error', 'ForInStatement', 'LabeledStatement', 'WithStatement'],
+    'no-restricted-syntax': [
+      'error',
+      'ForInStatement',
+      'LabeledStatement',
+      'WithStatement',
+    ],
     'no-await-in-loop': 'off',
     'promise/prefer-await-to-then': 'warn',
     'unicorn/prevent-abbreviations': 'off',

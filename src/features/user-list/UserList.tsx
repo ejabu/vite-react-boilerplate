@@ -1,17 +1,16 @@
+import { cx } from 'class-variance-authority';
+
 import { useCase } from './useCase';
 
 const UserList = () => {
-  const {
-    users,
-    pageIndex,
-    handleNext,
-    handlePrevious,
-    isFetching,
-  } = useCase();
+  const { users, pageIndex, handleNext, handlePrevious, isFetching } =
+    useCase();
 
   return (
     <div>
-      <strong>User List</strong>
+      <div className={cx('text-blue-500', pageIndex === 2 && 'text-red-500')}>
+        User List
+      </div>
       <br />
       <div>
         {users.map((user) => {

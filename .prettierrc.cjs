@@ -24,4 +24,5 @@ module.exports = {
     '',
   ],
   importOrderParserPlugins: ['typescript', 'jsx', 'decorators-legacy'],
+  tailwindFunctions: ['clsx', 'cn', 'cx'],
 };
