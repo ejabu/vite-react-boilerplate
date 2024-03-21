@@ -1,5 +1,9 @@
 module.exports = {
-  plugins: ['@ianvs/prettier-plugin-sort-imports', 'prettier'],
+  plugins: [
+    '@ianvs/prettier-plugin-sort-imports',
+    'prettier-plugin-tailwindcss',
+    'prettier',
+  ],
   singleQuote: true,
   trailingComma: 'all',
   tabWidth: 2,
