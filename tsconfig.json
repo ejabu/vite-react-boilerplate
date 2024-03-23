@@ -4,7 +4,6 @@
     "useDefineForClassFields": true,
     "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "module": "ESNext",
-    "skipLibCheck": true,
 
     /* Bundler mode */
     "moduleResolution": "bundler",
@@ -16,10 +15,18 @@
 
     /* Linting */
     "strict": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": false,
     "noUnusedLocals": true,
     "noUnusedParameters": false,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+
+    /* Performance */
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true
   },
+  /* Performance */
+  "references": [{ "path": "./tsconfig.node.json" }],
   "include": ["src"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "exclude": ["**/node_modules", "**/.*/"]
 }
