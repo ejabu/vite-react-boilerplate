@@ -1,18 +1,18 @@
 import axios, { AxiosResponse } from 'axios';
 
-type User = {
+interface User {
   id: number;
   firstName: string;
   lastName: string;
-};
+}
 
-type UserResponse = {
+interface UserResponse {
   users: {
     id: number;
     firstName: string;
     lastName: string;
   }[];
-};
+}
 
 class UserService {
   async getUsers(pageIndex: number): Promise<User[]> {
@@ -25,6 +25,4 @@ class UserService {
   }
 }
 
-const userService = new UserService();
-
-export default userService;
+export default UserService;
