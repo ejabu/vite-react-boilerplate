@@ -6,12 +6,12 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "preview": "vite preview",
+    "format:new": "prettier-eslint \"src/**/*.ts\" --write && prettier-eslint \"src/**/*.tsx\" --write && prettier-eslint \"src/**/*.js\" --write",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --format=pretty",
     "lint:fix": "eslint  --fix . --ext ts,tsx --report-unused-disable-directives",
-    "format:new": "prettier-eslint \"src/**/*.ts\" --write && prettier-eslint \"src/**/*.tsx\" --write && prettier-eslint \"src/**/*.js\" --write",
-    "format": "npm run prettify && npm run lint:fix ",
-    "preview": "vite preview",
-    "prettify": "prettier . --write"
+    "prettify": "prettier . --write",
+    "format": "npm run prettify && npm run lint:fix "
   },
   "dependencies": {
     "axios": "^1.6.8",
@@ -33,6 +33,8 @@
     "eslint-config-airbnb-typescript": "^18.0.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-formatter-pretty": "5",
+    "eslint-plugin-encapsulate": "^0.1.2",
+    "eslint-plugin-etc": "^2.0.3",
     "eslint-plugin-newline-destructuring": "^1.2.1",
     "eslint-plugin-prettier": "^5.1.3",
     "eslint-plugin-promise": "^6.1.1",
